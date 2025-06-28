@@ -15,5 +15,35 @@
   <h2>Welcome to JD Constructions</h2>
   <p>We build quality spaces that last a lifetime.</p>
 </section>
+<section class="contact-section-bg" style="background-image: url('/image/contact.png'); background-size: cover; background-position: center;">
+  <div class="overlay">
+    <div class="contact-wrapper">
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h2>Contact Us</h2>
+        <p><strong><i class="fas fa-phone-alt"></i> Phone:</strong><br> +91 94278 89117</p>
+        <p><strong><i class="fas fa-envelope"></i> Email:</strong><br> info@jdconstructions.in</p>
+        <p><strong><i class="fas fa-clock"></i> Working Hours:</strong><br> Mon–Fri: 10am – 8pm</p>
+      </div>
+
+      <!-- Contact Form -->
+      <form class="contact-form" action="/contact" method="POST">
+        <div class="form-row">
+          <input type="text" name="firstname" placeholder="First Name" required>
+          <input type="text" name="lastname" placeholder="Last Name" required>
+        </div>
+        <div class="form-row">
+          <input type="email" name="email" placeholder="Email Address" required>
+          <input type="text" name="phone" placeholder="Phone Number" required>
+        </div>
+        <input type="text" name="address" placeholder="Address" required>
+        <textarea name="message" placeholder="Write your message here..." required></textarea>
+        <button type="submit">SEND</button>
+      </form>
+
+    </div>
+  </div>
+</section>
 
 <%- include("./partials/footer") %>
