@@ -31,3 +31,7 @@ app.use('/contact', contactRouter);
 app.listen(port, () => {
   console.log(`🚀 JD Constructions server at http://localhost:${port}`);
 });
+
+app.get("/projects/rajkotairport", (req, res) => {
+  res.render("projects/rajkotairport");
+});

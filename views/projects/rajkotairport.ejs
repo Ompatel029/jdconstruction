@@ -1,0 +1,55 @@
+<%- include("../partials/navbar") %>
+
+<section class="project-details-page">
+  <div class="details-container">
+    <h1>Box Culvert & Boundary Wall Work at New Greenfield International Airport, Hirasar – Rajkot</h1>
+    <p class="subheading">Executed in partnership with Dilip Buildcon Ltd. using advanced engineering techniques.</p>
+    <img src="/image/project/rajkot.jpeg" alt="Box Culvert Full" class="project-image main-img">
+    <p><strong>Span:</strong> 3 spans</p>
+    <p><strong>Partnered with:</strong> Dilip Buildcon Limited</p>
+    <p><strong>Location:</strong> Rajkot Airport</p>
+    <p><strong>Description:</strong> Completed boundary wall and box culvert construction at Rajkot Airport under contract with Dilip Buildcon Ltd. High quality materials and structural precision were ensured.</p>
+  </div>
+</section>
+
+<section class="media-gallery">
+  <h2>Project Gallery</h2>
+  <div class="gallery-grid">
+    <% for(let i = 1; i <= 18; i++) { %>
+      <img src="/image/project/img<%= i %>.jpg" alt="Image <%= i %>" onclick="openPreview(this.src)">
+    <% } %>
+  </div>
+
+  <h2>Project Video</h2>
+  <video controls class="project-video">
+    <source src="/video/rajkot-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <h2>Airport Boundary Wall Work</h2>
+  <div class="gallery-grid">
+    <% for(let i = 19; i <= 25; i++) { %>
+      <img src="/image/project/img<%= i %>.jpg" alt="Boundary Work <%= i %>" onclick="openPreview(this.src)">
+    <% } %>
+  </div>
+</section>
+
+<!-- Image Preview Modal -->
+<div id="previewModal" class="preview-modal hidden">
+  <span class="close-btn" onclick="closePreview()">×</span>
+  <img id="previewImage" src="" alt="Preview Image">
+</div>
+
+<%- include("../partials/footer") %>
+
+<!-- Preview Script -->
+<script>
+  function openPreview(src) {
+    document.getElementById("previewImage").src = src;
+    document.getElementById("previewModal").classList.remove("hidden");
+  }
+
+  function closePreview() {
+    document.getElementById("previewModal").classList.add("hidden");
+  }
+</script>

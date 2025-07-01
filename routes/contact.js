@@ -11,10 +11,10 @@ router.post('/', async (req, res) => {
     const { firstname, lastname, email, phone, message } = req.body;
     const contact = new Contact({ firstname, lastname, email, phone, message });
     await contact.save();
-    console.log('✅ JD Constructions contact message saved.');
+    console.log('✅ Jk Constructions contact message saved.');
     res.redirect('/');
   } catch (err) {
-    console.error("❌ JD Contact form error:", err.message);
+    console.error("❌ Jk Contact form error:", err.message);
     res.status(500).send("Form submission failed.");
   }
 });
